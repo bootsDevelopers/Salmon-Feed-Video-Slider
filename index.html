@@ -1,0 +1,1302 @@
+<style type="text/css">
+
+			.tabMenu {float:left; display:block;}
+			.tabMenu ul li{width:164px; height:72px; display:inline; float:left;}
+			.tabMenu ul li a {text-decoration: none; color: #0073BF;}
+			.tabMenu ul li.activeTab {}
+
+
+				.tab1ProductStrip
+					{
+						width:543px; 
+						height:auto;
+						border: 1px solid #e5e5e5;
+					}
+				.tab1ProductList a {text-decoration: none;}
+				.tab1ProductList li{text-align: center;}
+				.tab1ProductList li span {color: #333;}
+				.tab1RelevantImage{width:507px; height:317px; clear:both;}
+	
+	.hoverscroll {
+		border:;
+	}
+	#my-list li {
+		width: 120px;
+		height: auto;
+		background:;
+		border:;
+		margin: 2px 4px;
+	}
+
+	#my-list2 li {
+		width: 120px;
+		height: auto;
+		background:;
+		border:;
+		margin: 2px 4px;
+	}
+
+	#my-list3 li {
+		width: 120px;
+		height: auto;
+		background:;
+		border:;
+		margin: 2px 4px;
+	}
+
+#fancybox-loading 
+	{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+	}
+	
+#fancybox-img 
+	{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
+	}
+		
+#fancybox-content 
+	{
+	width: 0;
+	height: 0;
+	padding: 0;
+	outline: none;
+	position: relative;
+	overflow: hidden;
+	z-index: 1102;
+	-moz-border-radius: 7px;
+	-webkit-border-radius:7px;	
+	border-radius:7px;
+	-o-border-radius:7px;
+	border: 0px solid #fff;
+	padding-top: 5px;
+	}		
+
+#fancybox-loading div 
+	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 480px;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png');
+	}
+
+#fancybox-overlay 
+	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1100;
+	display: none;
+	}
+
+#fancybox-tmp 
+	{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+	}
+
+#fancybox-wrap 
+	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: -12px;
+	padding: 0px 20px 20px 20px;
+	z-index: 1101;
+	outline: none;
+	display: none;
+	}
+
+#fancybox-outer 
+	{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	-moz-border-radius: 7px;
+	-webkit-border-radius:7px;	
+	border-radius:7px;	
+	-o-border-radius:7px;
+	}
+	
+#fancybox-hide-sel-frame 
+	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1101;
+	}
+
+
+#fancybox-close 
+	{
+	position: absolute;
+	top: 5px;
+	right: 7px;
+	width: 50px;
+	height: 18px;
+	background: transparent url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_close/close.gif');
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+	}
+
+
+#fancybox-error 
+	{
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 14px;
+	margin: 0;
+	}
+
+
+#fancybox-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#fancybox-left, #fancybox-right {
+	position: absolute;
+	bottom: 0px;
+	height: 100%;
+	width: 35%;
+	cursor: pointer;
+	outline: none;
+	background: transparent url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/blank/blank.gif');
+	z-index: 1102;
+	display: none;
+}
+
+#fancybox-left {
+	left: 0px;
+}
+
+#fancybox-right {
+	right: 0px;
+}
+
+#fancybox-left-ico, #fancybox-right-ico {
+	position: absolute;
+	top: 50%;
+	left: -9999px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	cursor: pointer;
+	z-index: 1102;
+	display: block;
+}
+
+#fancybox-left-ico {
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png');
+	background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png');
+	background-position: -40px -60px;
+}
+
+#fancybox-left:hover, #fancybox-right:hover {
+	visibility: visible; /* IE6 */
+}
+
+#fancybox-left:hover span {
+	left: 20px;
+}
+
+#fancybox-right:hover span {
+	left: auto;
+	right: 20px;
+}
+
+.fancybox-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+}
+
+#fancybox-bg-n {
+	top: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox-x/fancybox-x.png');
+}
+
+#fancybox-bg-ne {
+	top: -20px;
+	right: -20px;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png');
+	background-position: -40px -162px;
+}
+
+#fancybox-bg-e {
+	top: 0;
+	right: -20px;
+	height: 100%;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox-y/fancybox-y.png');
+	background-position: -20px 0px;
+}
+
+#fancybox-bg-se {
+	bottom: -20px;
+	right: -20px;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png');
+	background-position: -40px -182px; 
+}
+
+#fancybox-bg-s {
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox-x/fancybox-x.png');
+	background-position: 0px -20px;
+}
+
+#fancybox-bg-sw {
+	bottom: -20px;
+	left: -20px;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png');
+	background-position: -40px -142px;
+}
+
+#fancybox-bg-w {
+	top: 0;
+	left: -20px;
+	height: 100%;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox-y/fancybox-y.png');
+}
+
+#fancybox-bg-nw {
+	top: -20px;
+	left: -20px;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png');
+	background-position: -40px -122px;
+}
+
+#fancybox-title {
+	font-family: Helvetica;
+	font-size: 12px;
+	z-index: 1102;
+}
+
+.fancybox-title-inside {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #333;
+	background: #fff;
+	position: relative;
+}
+
+.fancybox-title-outside {
+	padding-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-over {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #FFF;
+	text-align: left;
+}
+
+#fancybox-title-over {
+	padding: 10px;
+	background-image: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_title_over/fancy_title_over.png');
+	display: block;
+}
+
+.fancybox-title-float {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	height: 32px;
+}
+
+#fancybox-title-float-wrap {
+	border: none;
+	border-collapse: collapse;
+	width: auto;
+}
+
+#fancybox-title-float-wrap td {
+	border: none;
+	white-space: nowrap;
+}
+
+/* Loading animation */
+
+#fancybox-title-float-left {
+	padding: 0 0 0 15px;
+	background: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png') -40px -90px no-repeat; 
+}
+
+#fancybox-title-float-main {
+	color: #FFF;
+	line-height: 29px;
+	font-weight: bold;
+	padding: 0 0 3px 0;
+	background: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox-x/fancybox-x.png') 0px -40px;
+}
+
+#fancybox-title-float-right {
+	padding: 0 0 0 15px;
+	background: url('http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancybox/fancybox.png') -55px -90px no-repeat;
+}
+
+/* IE6 */
+
+.fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_close/close.gif', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_nav_left/fancy_nav_left.gif', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_nav_right/fancy_nav_right.gif', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_title_over/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_title_left/fancy_title_left.gif', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_title_main/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_title_right/fancy_title_right.gif', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+	height: expression(this.parentNode.clientHeight + "px");
+}
+
+#fancybox-loading.fancybox-ie6 {
+	position: absolute; margin-top: 0;
+	top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+
+#fancybox-loading.fancybox-ie6 div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_loading/fancy_loading.png', sizingMethod='scale'); }
+
+/* IE6, IE7, IE8 */
+
+.fancybox-ie .fancybox-bg { background: transparent !important; }
+
+.fancybox-ie #fancybox-bg-n { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_n/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-ne { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_ne/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-e { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_e/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-se { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_se/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-s { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_s/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_sw/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_w/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Content%20/Health/000_2011/_SEP11/DietChef/boxElements/fancy_shadow_nw/fancy_shadow_nw.png', sizingMethod='scale'); }
+/* Main container */
+div.hoverscroll {
+	position:relative;
+}
+/* List container */
+div.hoverscroll div.listcontainer {
+	overflow:hidden;
+}
+div.hoverscroll div.fixed-listcontainer {
+    overflow: hidden;
+    float: left;
+}
+/* Actual list containing items */
+div.hoverscroll ul.list {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+/* Items contained in the list */
+div.hoverscroll ul.list li.item {
+	display:block;
+	padding:0;
+}
+div.hoverscroll.horizontal ul.list li.item {
+	float:left;
+}
+div.hoverscroll.horizontal.rtl ul.list li.item {
+	float: right;
+}
+
+
+
+/* Arrows */
+div.hoverscroll div.arrow {
+	position:absolute;
+	float:none;
+	background-color:;
+	background-position:center;
+	background-repeat:no-repeat;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+div.hoverscroll div.fixed-arrow {
+    display: block;
+    float: left;
+    background-color:;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.hoverscroll div.arrow.left,
+div.hoverscroll div.arrow.right,
+div.hoverscroll div.fixed-arrow.left,
+div.hoverscroll div.fixed-arrow.right {
+	top:0px;
+	width:30px;
+	height:100%;
+}
+div.hoverscroll div.arrow.left,
+div.hoverscroll div.fixed-arrow.left {
+	left:0px;
+	margin:0;	
+	background-image:url('/wcsstore/cmsassets/Boots/Library/Icon/Content%20/BeautyNew/_2012/05_May/scrollBox/left.png/left.png');
+}
+div.hoverscroll div.arrow.right,
+div.hoverscroll div.fixed-arrow.right {
+	right:0px;
+	margin:0;
+	background-image:url('/wcsstore/cmsassets/Boots/Library/Icon/Content%20/BeautyNew/_2012/05_May/scrollBox/right.png/right.png');
+}
+
+.titleBoxClass
+	{
+		width:542px;background-color:#D9EAF7;display:block;
+		-moz-border-radius: 7px 7px 0px 0px;
+		-o-border-radius: 7px 7px 0px 0px;
+        -webkit-border-radius: 7px 7px 0px 0px;
+        border-radius: 7px 7px 0px 0px;
+        margin:0;
+        padding:5px;
+	}
+
+.productCont
+	{
+		position:relative;
+	}
+
+.titleTextBox	
+	{
+		height: 30px;
+	}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="jquery.hoverscroll.js"></script>
+
+
+<script type="text/javascript">
+
+(function($) {
+
+
+$.fn.hoverscroll = function(params) {
+	if (!params) { params = {}; }
+	
+	// Extend default parameters
+	// note: empty object to prevent params object from overriding default params object
+	params = $.extend({}, $.fn.hoverscroll.params, params);
+	
+	// Loop through all the elements
+	this.each(function() {
+		var $this = $(this);
+		
+		if (params.debug) {
+			$.log('[HoverScroll] Trying to create hoverscroll on element ' + this.tagName + '#' + this.id);
+		}
+		
+		// wrap ul list with a div.listcontainer
+        if (params.fixedArrows) {
+            $this.wrap('<div class="fixed-listcontainer"></div>')
+        }
+        else {
+            $this.wrap('<div class="listcontainer"></div>');
+        }
+		
+		$this.addClass('list');
+		//.addClass('ui-helper-clearfix');
+		
+		// store handle to listcontainer
+		var listctnr = $this.parent();
+		
+		// wrap listcontainer with a div.hoverscroll
+		listctnr.wrap('<div class="ui-widget-content hoverscroll' +
+			(params.rtl && !params.vertical ? " rtl" : "") + '"></div>');
+		//listctnr.wrap('<div class="hoverscroll"></div>');
+		
+		// store hoverscroll container
+		var ctnr = listctnr.parent();
+
+        var leftArrow, rightArrow, topArrow, bottomArrow;
+
+		// Add arrow containers
+		if (params.arrows) {
+			if (!params.vertical) {
+                if (params.fixedArrows) {
+                    leftArrow = '<div class="fixed-arrow left"></div>';
+                    rightArrow = '<div class="fixed-arrow right"></div>';
+
+                    listctnr.before(leftArrow).after(rightArrow);
+                }
+                else {
+                    leftArrow = '<div class="arrow left"></div>';
+                    rightArrow = '<div class="arrow right"></div>';
+                    
+                    listctnr.append(leftArrow).append(rightArrow);
+                }
+			}
+			else {
+                if (params.fixedArrows) {
+                    topArrow = '<div class="fixed-arrow top"></div>';
+                    bottomArrow = '<div class="fixed-arrow bottom"></div>';
+
+                    listctnr.before(topArrow).after(bottomArrow);
+                }
+                else {
+                    topArrow = '<div class="arrow top"></div>';
+                    bottomArrow = '<div class="arrow bottom"></div>';
+
+                    listctnr.append(topArrow).append(bottomArrow);
+                }
+			}
+		}
+		
+		// Apply parameters width and height
+		ctnr.width(params.width).height(params.height);
+
+        if (params.arrows && params.fixedArrows) {
+            if (params.vertical) {
+                topArrow = listctnr.prev();
+                bottomArrow = listctnr.next();
+
+                listctnr.width(params.width)
+                    .height(params.height - (topArrow.height() + bottomArrow.height()));
+            }
+            else {
+                leftArrow = listctnr.prev();
+                rightArrow = listctnr.next();
+                
+                listctnr.height(params.height)
+                    .width(params.width - (leftArrow.width() + rightArrow.width()));
+            }
+        }
+        else {
+            listctnr.width(params.width).height(params.height);
+        }
+		
+		var size = 0;
+		
+		if (!params.vertical) {
+			ctnr.addClass('horizontal');
+			
+			// Determine content width
+			$this.children().each(function() {
+				$(this).addClass('item');
+				
+				if ($(this).outerWidth) {
+					size += $(this).outerWidth(true);
+				}
+				else {
+					// jQuery < 1.2.x backward compatibility patch
+					size += $(this).width() + parseInt($(this).css('padding-left')) + parseInt($(this).css('padding-right'))
+						+ parseInt($(this).css('margin-left')) + parseInt($(this).css('margin-right'));
+				}
+			});
+			// Apply computed width to listcontainer
+			$this.width(size);
+			
+			if (params.debug) {
+				$.log('[HoverScroll] Computed content width : ' + size + 'px');
+			}
+			
+			// Retrieve container width instead of using the given params.width to include padding
+			if (ctnr.outerWidth) {
+				size = ctnr.outerWidth();
+			}
+			else {
+				// jQuery < 1.2.x backward compatibility patch
+				size = ctnr.width() + parseInt(ctnr.css('padding-left')) + parseInt(ctnr.css('padding-right'))
+					+ parseInt(ctnr.css('margin-left')) + parseInt(ctnr.css('margin-right'));
+			}
+			
+			if (params.debug) {
+				$.log('[HoverScroll] Computed container width : ' + size + 'px');
+			}
+		}
+		else {
+			ctnr.addClass('vertical');
+			
+			// Determine content height
+			$this.children().each(function() {
+				$(this).addClass('item')
+				
+				if ($(this).outerHeight) {
+					size += $(this).outerHeight(true);
+				}
+				else {
+					// jQuery < 1.2.x backward compatibility patch
+					size += $(this).height() + parseInt($(this).css('padding-top')) + parseInt($(this).css('padding-bottom'))
+						+ parseInt($(this).css('margin-bottom')) + parseInt($(this).css('margin-bottom'));
+				}
+			});
+			// Apply computed height to listcontainer
+			$this.height(size);
+			
+			if (params.debug) {
+				$.log('[HoverScroll] Computed content height : ' + size + 'px');
+			}
+			
+			// Retrieve container height instead of using the given params.height to include padding
+			if (ctnr.outerHeight) {
+				size = ctnr.outerHeight();
+			}
+			else {
+				// jQuery < 1.2.x backward compatibility patch
+				size = ctnr.height() + parseInt(ctnr.css('padding-top')) + parseInt(ctnr.css('padding-bottom'))
+					+ parseInt(ctnr.css('margin-top')) + parseInt(ctnr.css('margin-bottom'));
+			}
+			
+			if (params.debug) {
+				$.log('[HoverScroll] Computed container height : ' + size + 'px');
+			}
+		}
+		
+		// Define hover zones on container
+		var zone = {
+			1: {action: 'move', from: 0, to: 0.06 * size, direction: -1 , speed: 16},
+			2: {action: 'move', from: 0.06 * size, to: 0.15 * size, direction: -1 , speed: 8},
+			3: {action: 'move', from: 0.15 * size, to: 0.25 * size, direction: -1 , speed: 4},
+			4: {action: 'move', from: 0.25 * size, to: 0.4 * size, direction: -1 , speed: 2},
+			5: {action: 'stop', from: 0.4 * size, to: 0.6 * size},
+			6: {action: 'move', from: 0.6 * size, to: 0.75 * size, direction: 1 , speed: 2},
+			7: {action: 'move', from: 0.75 * size, to: 0.85 * size, direction: 1 , speed: 4},
+			8: {action: 'move', from: 0.85 * size, to: 0.94 * size, direction: 1 , speed: 8},
+			9: {action: 'move', from: 0.94 * size, to: size, direction: 1 , speed: 16}
+		}
+		
+		// Store default state values in container
+		ctnr[0].isChanging = false;
+		ctnr[0].direction  = 0;
+		ctnr[0].speed      = 1;
+		
+		
+		/**
+		 * Check mouse position relative to hoverscroll container
+		 * and trigger actions according to the zone table
+		 *
+		 * @param x {Integer} Mouse X event position
+		 * @param y {Integer} Mouse Y event position
+		 */
+		function checkMouse(x, y) {
+			x = x - ctnr.offset().left;
+			y = y - ctnr.offset().top;
+			
+			var pos;
+			if (!params.vertical) {pos = x;}
+			else {pos = y;}
+			
+			for (i in zone) {
+				if (pos >= zone[i].from && pos < zone[i].to) {
+					if (zone[i].action == 'move') {startMoving(zone[i].direction, zone[i].speed);}
+					else {stopMoving();}
+				}
+			}
+		}
+		
+		
+		/**
+		 * Sets the opacity of the left|top and right|bottom
+		 * arrows according to the scroll position.
+		 */
+		function setArrowOpacity() {
+			if (!params.arrows || params.fixedArrows) {return;}
+			
+			var maxScroll;
+			var scroll;
+			
+			if (!params.vertical) {
+				maxScroll = listctnr[0].scrollWidth - listctnr.width();
+				scroll = listctnr[0].scrollLeft;
+			}
+			else {
+				maxScroll = listctnr[0].scrollHeight - listctnr.height();
+				scroll = listctnr[0].scrollTop;
+			}
+			var limit = params.arrowsOpacity;
+			
+            // Optimization of opacity control by Josef Körner
+            // Initialize opacity; keep it between its extremas (0 and limit) we don't need to check limits after init
+			var opacity = (scroll / maxScroll) * limit;
+            
+   		    if (opacity > limit) { opacity = limit; }
+			if (isNaN(opacity)) { opacity = 0; }
+            
+			// Check if the arrows are needed
+			// Thanks to <admin at unix dot am> for fixing the bug that displayed the right arrow when it was not needed
+			var done = false;
+			if (opacity <= 0) {
+                $('div.arrow.left, div.arrow.top', ctnr).hide();
+                if(maxScroll > 0) {
+                    $('div.arrow.right, div.arrow.bottom', ctnr).show().css('opacity', limit);
+                }
+                done = true;
+            }
+			if (opacity >= limit || maxScroll <= 0) {
+           	    $('div.arrow.right, div.arrow.bottom', ctnr).hide();
+                done = true;
+            }
+
+			if (!done) {
+				$('div.arrow.left, div.arrow.top', ctnr).show().css('opacity', opacity);
+				$('div.arrow.right, div.arrow.bottom', ctnr).show().css('opacity', (limit - opacity));
+			}
+            // End of optimization
+		}
+		
+		
+		/**
+		 * Start scrolling the list with a given speed and direction
+		 *
+		 * @param direction {Integer}	Direction of the displacement, either -1|1
+		 * @param speed {Integer}		Speed of the displacement (20 being very fast)
+		 */
+		function startMoving(direction, speed) {
+			if (ctnr[0].direction != direction) {
+				if (params.debug) {
+					$.log('[HoverScroll] Starting to move. direction: ' + direction + ', speed: ' + speed);
+				}
+				
+				stopMoving();
+				ctnr[0].direction  = direction;
+				ctnr[0].isChanging = true;
+				move();
+			}
+			if (ctnr[0].speed != speed) {
+				if (params.debug) {
+					$.log('[HoverScroll] Changed speed: ' + speed);
+				}
+				
+				ctnr[0].speed = speed;
+			}
+		}
+		
+		/**
+		 * Stop scrolling the list
+		 */
+		function stopMoving() {
+			if (ctnr[0].isChanging) {
+				if (params.debug) {
+					$.log('[HoverScroll] Stoped moving');
+				}
+				
+				ctnr[0].isChanging = false;
+				ctnr[0].direction  = 0;
+				ctnr[0].speed      = 1;
+				clearTimeout(ctnr[0].timer);
+			}
+		}
+		
+		/**
+		 * Move the list one step in the given direction and speed
+		 */
+		function move() {
+			if (ctnr[0].isChanging == false) {return;}
+			
+			setArrowOpacity();
+			
+			var scrollSide;
+			if (!params.vertical) {scrollSide = 'scrollLeft';}
+			else {scrollSide = 'scrollTop';}
+			
+			listctnr[0][scrollSide] += ctnr[0].direction * ctnr[0].speed;
+			ctnr[0].timer = setTimeout(function() {move();}, 50);
+		}
+
+		// Initialize "right to left" option if specified
+		if (params.rtl && !params.vertical) {
+			listctnr[0].scrollLeft = listctnr[0].scrollWidth - listctnr.width();
+		}
+		
+		// Bind actions to the hoverscroll container
+		ctnr
+		// Bind checkMouse to the mousemove
+		.mousemove(function(e) {checkMouse(e.pageX, e.pageY);})
+		// Bind stopMoving to the mouseleave
+		// jQuery 1.2.x backward compatibility, thanks to Andy Mull!
+		// replaced .mouseleave(...) with .bind('mouseleave', ...)
+		.bind('mouseleave', function() {stopMoving();});
+
+        // Bind the startMoving and stopMoving functions
+        // to the HTML object for external access
+        this.startMoving = startMoving;
+        this.stopMoving = stopMoving;
+		
+		if (params.arrows && !params.fixedArrows) {
+			// Initialise arrow opacity
+			setArrowOpacity();
+		}
+		else {
+			// Hide arrows
+			$('.arrowleft, .arrowright, .arrowtop, .arrowbottom', ctnr).hide();
+		}
+	});
+	
+	return this;
+};
+
+
+// Backward compatibility with jQuery 1.1.x
+if (!$.fn.offset) {
+	$.fn.offset = function() {
+		this.left = this.top = 0;
+		
+		if (this[0] && this[0].offsetParent) {
+			var obj = this[0];
+			do {
+				this.left += obj.offsetLeft;
+				this.top += obj.offsetTop;
+			} while (obj = obj.offsetParent);
+		}
+		
+		return this;
+	}
+}
+
+
+
+/**
+ * HoverScroll default parameters
+ */
+$.fn.hoverscroll.params = {
+	vertical:	false,      // Display the list vertically or not
+	width:		533,        // Width of the list
+	height:		220,         // Height of the list
+	arrows:		true,       // Display arrows to the left and top or the top and bottom
+	arrowsOpacity:	1,    // Maximum opacity of the arrows if fixedArrows
+    fixedArrows: false,     // Fix the displayed arrows to the side of the list
+	rtl:		false,		// Set display mode to "Right to Left"
+	debug:		false       // Display some debugging information in firebug console
+};
+
+
+
+/**
+ * Log errors to consoles (firebug, opera) if exist, else uses alert()
+ */
+$.log = function() {
+	try {console.log.apply(console, arguments);}
+	catch (e) {
+		try {opera.postError.apply(opera, arguments);}
+		catch (e) {
+//            alert(Array.prototype.join.call(arguments, " "));
+        }
+	}
+};
+
+
+})(jQuery);
+
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#my-list').hoverscroll({
+			vertical:	false,      // Display the list vertically or not
+			width:		543,        // Width of the list
+			height:		220,         // Height of the list
+			arrows:		true,       // Display arrows to the left and top or the top and bottom
+			arrowsOpacity:	1,    // Maximum opacity of the arrows if fixedArrows
+		    fixedArrows: false,     // Fix the displayed arrows to the side of the list
+			rtl:		false,		// Set display mode to "Right to Left"
+			debug:		false       // Display some debugging information in firebug console
+        });
+        var direction = 1,
+            speed = 1;
+        $("#my-list")[0].startMoving(direction, speed);
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#my-list2').hoverscroll({
+			vertical:	false,      // Display the list vertically or not
+			width:		543,        // Width of the list
+			height:		220,         // Height of the list
+			arrows:		true,       // Display arrows to the left and top or the top and bottom
+			arrowsOpacity:	1,    // Maximum opacity of the arrows if fixedArrows
+		    fixedArrows: false,     // Fix the displayed arrows to the side of the list
+			rtl:		false,		// Set display mode to "Right to Left"
+			debug:		false       // Display some debugging information in firebug console
+        });
+        var direction = 1,
+            speed = 1;
+        $("#my-list2")[0].startMoving(direction, speed);
+	});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1234377",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod1').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1234373",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod2').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1250477",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod3').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1106367",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod4').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1106375",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod5').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1104348",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod6').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1104342",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod7').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1261690",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod8').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+		type : "GET",
+		crossDomain:true,
+		url : "/webapp/wcs/stores/servlet/CreateCMSFlashXML?storeId=10052&langId=-1&catalogId=11051&CE_1=1104346",
+		dataType : "xml",
+		success: function(xml) {
+
+			$(xml).find('Product').each(function(){
+			var price = $(this).find('Retail_Price').text();
+			var id = $(this).find('CantentryId').text();
+			var stockCheck = $(this).find('OutOfStock').text();
+		
+			if(stockCheck == 'false'){
+				var stock = "Out of stock";
+			}else{
+				var stock = "In stock";
+			}
+
+			var priceOut = '<br /><div class="priceOut"><b>£' + price + '</b></div>';
+
+			$('#prod9').append($(priceOut));
+
+			});
+		}
+	});
+});
+
+</script>
+
+<h3>How to do a sleek up do with Umberto Giannini</h3>
+
+<p>Find out how to create a smooth and sleek dressy up-do for autumn with the help of Ben Randle, Principle Stylist and Technical Director at Umberto Giannini</p>
+
+<iframe src="http://www.youtube-nocookie.com/embed/Bne9MIpZZ20?rel=0&theme=light&autohide=0&autoplay=0&showinfo=1&wmode=opaque" allowfullscreen="" frameborder="0" height="337" width="545">
+</iframe>
+<div class="tab1ContentRight">
+	<div class="tab1ProductStrip">
+		<div class="tab1ProductDiv">
+			<ul class="tab1ProductList" id="my-list">
+				<li class="productCont" id="prod1"><a href="CMSContent/1234377" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10132241?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Incredible Body Shampoo</p></a><br /></li>
+
+				<li class="productCont" id="prod2"><a href="CMSContent/1234373" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10132232?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Incredible Body Conditioner </p></a><br /></li>
+
+				<li class="productCont" id="prod3"><a href="CMSContent/1250477" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10136956?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Incredible Body Root Boost Volume Spray for Big Hair</p></a><br /></li>			
+			</ul>
+		</div>
+	</div>
+</div>
+
+<br />
+
+<br /> 
+
+<h3>How to get expensive but effortless looking hair with Umberto Giannini</h3>
+
+<p>Umberto Giannini's Principle Stylist and Technical Director, Ben Randle, shows you how to achieve perfectly glossy, expensive yet effortless-looking hair</p>
+
+<br>
+
+<iframe src="http://www.youtube-nocookie.com/embed/rM8lc-zHwQc?rel=0&theme=light&autohide=0&autoplay=0&showinfo=1&wmode=opaque" allowfullscreen="" frameborder="0" height="337" width="545">
+</iframe>
+
+<br style="clear:both;" />
+
+<br style="clear:both;" />
+
+<p><b>Umberto Giannini &#45; Frizzi range is available from October 2012</b></p>
+
+<br>
+
+<h3>How to create the 'twisted texture' look with Umberto Giannini</h3>
+
+<p>Claire Buckley, Senior Creative Stylist at Umberto Giannini, shows you how to create the 'twisted texture' Grecian goddess look at home</p>
+
+<br>
+
+<iframe src="http://www.youtube-nocookie.com/embed/gCND8zwF_h8?rel=0&theme=light&autohide=0&autoplay=0&showinfo=1&wmode=opaque" allowfullscreen="" frameborder="0" height="337" width="545">
+</iframe>
+<div class="tab1ContentRight">
+	<div class="tab1ProductStrip">
+		<div class="tab1ProductDiv">
+			<ul class="tab1ProductList" id="my-list2">
+				<li class="productCont" id="prod4"><a href="CMSContent/1106367" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10106749?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Glam Hair Ditch The Dirt Volume Shampoo</p></a><br /></li>
+
+								
+				<li class="productCont" id="prod5"><a href="CMSContent/1106375" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10106762?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Glam Hair Plump & Sexy Volume Conditioner</p></a><br /></li>
+										
+
+				<li class="productCont" id="prod6"><a href="CMSContent/1104348" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10105689?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Glam Hair Massive mousse</p></a><br /></li>
+										
+
+				<li class="productCont" id="prod7"><a href="CMSContent/1104342" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10105686?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Glam Hair Backcomb In A Bottle</p></a><br /></li>
+
+				<li class="productCont" id="prod8"><a href="CMSContent/1261690" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10139831?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Scrunch Up The Volume Messy Texture Cream</p></a><br /></li>
+										
+
+				<li class="productCont" id="prod9"><a href="CMSContent/1104346" target="_blank"><img src="http://boots.scene7.com/is/image/Boots/10105688?wid=88&hei=111&op_sharpen=1"><br /><p class="titleTextBox">Umberto Giannini Glam Hair Rock 'N' Roll Extreme Hairspray</p></a><br /></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<br>
+
+
+
+<p><b>Read more like this</b><br>
+	<a href="CMSContent/1283252">Autumn/winter 2012: Hair and make up trend report</a></p>
+<br>
+
+<p><b>Related categories</b><br>
+	<a href="http://www.boots.com/en/Beauty/">Beauty</a><br>
+	<a href="http://www.boots.com/en/Beauty/Hair/">Hair</a><br>
+	<a href="http://www.boots.com/en/Beauty/Beauty-Information-Advice/">The beauty update</a></p>
+
